@@ -1,2 +1,2 @@
 # HeartsAndMinds
-7Cav variant of Domination by  Vdauphin and Giallustio
+7Cav variant of Hearts and Minds by Vdauphin and Giallustio
