@@ -41,7 +41,8 @@ cav_whitelisted_steamids = [
 	"76561198000293318", // Wulf.C       - S3 Pub
 	"76561198102939824", //	Geki.T       - S3 Pub
 	"76561197983063284", // Tyrcon.L     - S3 Pub
-	"76561198043140265"  // Centeno.J    - S3 Pub
+	"76561198043140265", // Centeno.J    - S3 Pub
+	"76561197998120736"  // Hamm.C
 ];
 
 //MP stuffs
@@ -54,5 +55,6 @@ MP_whitelisted_steamids = [
 	"76561198103184850", // Davidson.J   - MP
     "76561198064801106", // Tiddens.M    - MP
     "76561198028913012", // Rozhkov.P    - MP
-    "76561198010258244"  // Volkerson.A  - MP
+    "76561198010258244",  // Volkerson.A  - MP
+	"76561197998120736"  // Hamm.C
 ];
