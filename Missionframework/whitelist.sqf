@@ -42,7 +42,8 @@ cav_whitelisted_steamids = [
 	"76561198102939824", //	Geki.T       - S3 Pub
 	"76561197983063284", // Tyrcon.L     - S3 Pub
 	"76561198043140265", // Centeno.J    - S3 Pub
-	"76561197998120736"  // Hamm.C
+	"76561197998120736",  // Hamm.C
+	"76561198102058133"  // Sullivan.A
 ];
 
 //MP stuffs
