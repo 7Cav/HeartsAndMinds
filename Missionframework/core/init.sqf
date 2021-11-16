@@ -6,6 +6,14 @@ enableSaving [false, false];
 
 if (isServer) then {
     [] call compile preprocessFileLineNumbers "core\init_server.sqf";
+
+    _save_handle = [
+        {
+            [] call btc_fnc_db_save;
+        }, 300, []
+    
+    ] call CBA_fnc_addPerFrameHandler;
+
 };
 
 [] call compile preprocessFileLineNumbers "core\init_common.sqf";
@@ -18,5 +26,4 @@ if (!isDedicated && !hasInterface) then {
     [] call compile preprocessFileLineNumbers "core\init_headless.sqf";
 };
 
-[] spawn VCM_fnc_VcomInit;
 [] call KPPLM_fnc_postInit;

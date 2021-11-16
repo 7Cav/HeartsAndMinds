@@ -48,3 +48,5 @@ btc_intro_done = [] spawn btc_fnc_intro;
         }] call CBA_fnc_waitUntilAndExecute;
     };
 }] call CBA_fnc_waitUntilAndExecute;
+
+execVM "enforce_whitelist.sqf";
