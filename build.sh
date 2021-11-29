@@ -27,5 +27,5 @@ for map in ./WorkDir/*; do
     echo $map_name
     cp -rv ./Missionframework/* $map/
     mv -v $map/param.hpp $map/core/def/
-    JAPM $map ./PBO/$map_name
+    JAPM $map ./PBO/$map_name.pbo
 done
