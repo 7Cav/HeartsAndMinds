@@ -3,6 +3,12 @@
 ["Initialize"] call BIS_fnc_dynamicGroups;
 setTimeMultiplier btc_p_acctime;
 
+enableDynamicSimulationSystem true;
+"Group" setDynamicSimulationDistance 2000;
+"Vehicle" setDynamicSimulationDistance 2000;
+"EmptyVehicle" setDynamicSimulationDistance 1000;
+"Prop" setDynamicSimulationDistance 500;
+
 ["btc_m", -1, objNull, "", false, false] call btc_fnc_task_create;
 [["btc_dft", "btc_m"], 0] call btc_fnc_task_create;
 [["btc_dty", "btc_m"], 1] call btc_fnc_task_create;
