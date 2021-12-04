@@ -44,7 +44,8 @@ cav_whitelisted_steamids = [
 	"76561198043140265", // Centeno.J    - S3 Pub
 	"76561197998120736", // Hamm.C
 	"76561198102058133", // Sullivan.A
-	"76561198000446745"  // Langlois 
+	"76561198000446745", // Langlois
+	"76561198084395456"  // Gann
 ];
 
 //MP stuffs
