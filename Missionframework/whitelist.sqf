@@ -46,7 +46,8 @@ cav_whitelisted_steamids = [
 	"76561198102058133", // Sullivan.A
 	"76561198000446745", // Langlois
 	"76561198084395456", // Gann
-	"76561198018059926"  // Guerra
+	"76561198018059926", // Guerra
+    "76561198083381250"  // Lindsay.A
 ];
 
 //MP stuffs
