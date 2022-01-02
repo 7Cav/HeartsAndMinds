@@ -50,3 +50,11 @@ btc_intro_done = [] spawn btc_fnc_intro;
 }] call CBA_fnc_waitUntilAndExecute;
 
 execVM "enforce_whitelist.sqf";
+
+//Garage
+    btc_fnc_open_garage = compile preprocessFileLineNumbers "core\fnc\garage\openGarage.sqf";
+    btc_fnc_vehicleList = compile preprocessFileLineNumbers "core\fnc\garage\vehicleList.sqf";
+    btc_fnc_loadVehicle = compile preprocessFileLineNumbers "core\fnc\garage\loadVehicle.sqf";
+    btc_fnc_vehicleinfo = compile preprocessFileLineNumbers "core\fnc\garage\vehicleInfo.sqf";
+    btc_fnc_createvehicle = compile preprocessFileLineNumbers "core\fnc\garage\createVehicle.sqf";
+    btc_fnc_showSpawnButton = compile preprocessFileLineNumbers "core\fnc\garage\showSpawnButton.sqf";

@@ -8,7 +8,10 @@ enabledebugconsole = 1;
 #include "core\fnc\common\dlg.hpp"
 #include "core\fnc\fob\dlg.hpp"
 #include "core\fnc\log\dlg.hpp"
-#include "core\fnc\debug\defines.hpp"
+//#include "core\fnc\debug\defines.hpp"
+
+#include "common.hpp"
+#include "core\fnc\garage\garage_gui.hpp"
 
 class RscTitles {
     class Default {
