@@ -6,6 +6,12 @@ GarageVehicles = [
     // MRZR 4
     ["rhsusf_mrzr4_d", 2, -1, "", "land", {}, {}],
 
+    // Transport Truck
+    ["B_Truck_01_transport_F", 2, -1, "", "land", {}, {}],
+
+    // Flatbed Truck
+    ["B_Truck_01_flatbed_F", 2, -1, "", "land", {}, {}],
+
     // POLARIS
     ["B_LSV_01_unarmed_F", 2, -1, "", "land", {}, {}],
 
@@ -14,6 +20,12 @@ GarageVehicles = [
 
     // HWWMV (SOCOM MK19)
     ["rhsusf_m1165a1_gmv_mk19_m240_socom_d", 2, -1, "", "land", {}, {}],
+
+    // CROWS SOCOM
+    ["rhsusf_m1245_m2crows_socom_d", 2, -1, "", "land", {}, {}],
+
+    //Cool SOCOM Truck
+    ["rhsusf_M1238A1_M2_socom_d", 2, -1, "", "land", {}, {}],
 
     // Plower Stryker
     ["rhsusf_stryker_m1132_m2_d", 2, -1, "", "land", {}, {}],
@@ -74,6 +86,9 @@ GarageVehicles = [
 
     // CH-47 Cargo
     ["RHS_CH_47F_10_cargo", 5, -1, "", "air", {}, {}],
+
+    // A-10C
+    ["FIR_A10C_MD", 5, -1, "", "air", {}, {}],
 
     // Super Hornet
     ["RHS_AH64D_wd", 5, -1, "", "air", {}, {}]
