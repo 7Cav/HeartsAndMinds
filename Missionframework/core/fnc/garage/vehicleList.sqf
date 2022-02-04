@@ -63,6 +63,9 @@ GarageVehicles = [
     // M1230A1 (MEDEVAC)
     ["rhsusf_M1230a1_usarmy_d", 5, -1, "", "land", {}, {}],
 
+    // Namerra
+    ["B_APC_Tracked_01_CRV_F", 5, -1, "", "land", {}, {}],
+
     // M113 (M2)
     ["rhsusf_m113d_usarmy", 5, -1, "", "land", {}, {}],
 
@@ -77,6 +80,12 @@ GarageVehicles = [
 
     // H-60 DAP
     ["vtx_MH60M_DAP", 5, -1, "", "air", {}, {}],
+
+    // AH6M
+    ["RHS_MELB_AH6M", 5, -1, "", "air", {}, {}],
+
+    // MH6
+    ["RHS_MELB_MH6M", 5, -1, "", "air", {}, {}],
 
     // H-60
     ["vtx_HH60", 5, -1, "", "air", {}, {}],
