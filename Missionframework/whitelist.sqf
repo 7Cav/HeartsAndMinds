@@ -36,6 +36,7 @@ cav_whitelisted_steamids = [
 	"76561198149329790", // Mazinski.H   - S3 Ops Lead
 	"76561198000293318", // Wulf.C       - SL 2/1/A/1-7 / S3 Ops
 	"76561198102939824", //	Geki.T       - S3 Ops
+    "76561198419939876", // Spice.M      - S3 Ops
 	"76561197998120736", // Hamm.C       - MP
 	"76561198102058133", // Sullivan.A   - SL 4/2/B/1-7
 	"76561198000446745", // Langlois     - SL 4/1/A/1-7
