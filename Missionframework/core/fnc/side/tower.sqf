@@ -64,8 +64,9 @@ waitUntil {sleep 5; (!alive _tower || _taskID call BIS_fnc_taskCompleted)};
 
 [[], _btc_composition] call btc_fnc_delete;
 
-if (_taskID call BIS_fnc_taskState isEqualTo "CANCELED") exitWith {};
+if (_taskID call BIS_fnc_taskState isEqualTo "CANCELED") exitWith {side_mission_active = false;};
 
 80 call btc_fnc_rep_change;
+side_mission_active = false;
 
 [_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;

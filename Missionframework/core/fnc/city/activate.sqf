@@ -122,6 +122,9 @@ if !(_data_units isEqualTo []) then {
         for "_i" from 1 to (round (_p_mil_group_ratio * (1 + random _max_number_group))) do {
             [_city, _spawningRadius, 1 + round random [0, 1, 2], random 1] call btc_fnc_mil_create_group;
         };
+
+        private _closest = [_city, btc_city_all select {!(_x getVariable ["active", false])}, false] call btc_fnc_find_closecity;
+        [[_closest, [_city, _spawningRadius/3] call CBA_fnc_randPos, 1, selectRandom btc_type_motorized_armed], btc_fnc_mil_send] call btc_fnc_delay_exec;
     };
 
     if !(_type in ["Hill", "NameMarine"]) then {
@@ -240,17 +243,17 @@ if (_has_ho && {!(_city getVariable ["ho_units_spawned", false])}) then {
 };
 
 //Suicider
-if !(_city getVariable ["has_suicider", false]) then {
-    if ((time - btc_ied_suic_spawned) > btc_ied_suic_time && {random 1000 > btc_global_reputation}) then {
-        btc_ied_suic_spawned = time;
-        _city setVariable ["has_suicider", true];
-        if (selectRandom [false, false, btc_p_ied_drone]) then {
-            [[_city, _spawningRadius], btc_fnc_ied_drone_create] call btc_fnc_delay_exec;
-        } else {
-            [[_city, _spawningRadius], btc_fnc_ied_suicider_create] call btc_fnc_delay_exec;
-        };
-    };
-};
+//if !(_city getVariable ["has_suicider", false]) then {
+//    if ((time - btc_ied_suic_spawned) > btc_ied_suic_time && {random 1000 > btc_global_reputation}) then {
+//        btc_ied_suic_spawned = time;
+//        _city setVariable ["has_suicider", true];
+//        if (selectRandom [false, false, btc_p_ied_drone]) then {
+//            [[_city, _spawningRadius], btc_fnc_ied_drone_create] call btc_fnc_delay_exec;
+//        } else {
+//            [[_city, _spawningRadius], btc_fnc_ied_suicider_create] call btc_fnc_delay_exec;
+//        };
+//    };
+//};
 
 if (_city getVariable ["data_tags", []] isEqualTo []) then {
     private _tag_number = (switch _type do {
@@ -327,3 +330,17 @@ if (_numberOfCivVeh < _p_civ_max_veh) then {
 if (btc_debug) then {
     [format ["%1 - %2ms", _id, (serverTime - (_city getVariable ["serverTime", serverTime])) * 1000] , __FILE__, [btc_debug, false, true]] call btc_fnc_debug_message;
 };
+
+private _marker = createMarker [format ["loc_%1", _id], getPos _city];
+    _marker setMarkerShape "ELLIPSE";
+    _marker setMarkerBrush "SolidBorder";
+    _marker setMarkerSize [_radius, _radius];
+    _marker setMarkerAlpha 0.3;
+
+if (_has_en) then {
+    _marker setMarkerColor "colorRed";
+} else {
+    _marker setMarkerColor "colorGreen";
+};
+
+_city setVariable ["marker", _marker];

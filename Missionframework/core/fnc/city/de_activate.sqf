@@ -65,6 +65,8 @@ if !(_city getVariable ["active", false]) exitWith {};
             _data_units pushBack _data_group;
 
             if ((_data_group select 0) in [5, 7]) then {_has_suicider = true;};
+            { deleteVehicle _x } forEach units _x;
+
         };
     } forEach allGroups;
 
@@ -118,5 +120,9 @@ if !(_city getVariable ["active", false]) exitWith {};
     };
 
     [] call btc_fnc_city_cleanUp;
+
+    //_marker = _city getVariable ["marker"];
+    deleteMarker (format ["loc_%1", _id]);
+
 
 }, [_city, _id]] call CBA_fnc_waitUntilAndExecute;

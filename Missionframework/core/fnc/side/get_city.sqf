@@ -36,8 +36,9 @@ _city setVariable ["spawn_more", true];
 
 waitUntil {sleep 5; (_taskID call BIS_fnc_taskCompleted || !(_city getVariable ["occupied", false]))};
 
-if (_taskID call BIS_fnc_taskState isEqualTo "CANCELED") exitWith {};
+if (_taskID call BIS_fnc_taskState isEqualTo "CANCELED") exitWith {side_mission_active = false;};
 
 80 call btc_fnc_rep_change;
+side_mission_active = false;
 
 [_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;

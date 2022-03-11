@@ -56,16 +56,29 @@ if (btc_p_side_mission_cycle > 0) then {
     ["btc_tag_remover" + _x, "STR_BTC_HAM_ACTION_REMOVETAG", _x, ["#(rgb,8,8,3)color(0,0,0,0)"], "\a3\Modules_F_Curator\Data\portraitSmoke_ca.paa"] call ace_tagging_fnc_addCustomTag;
 } forEach ["ACE_SpraypaintRed"];
 
-_dynsim = [
-		{
-			enableDynamicSimulationSystem true;
-			"Group" setDynamicSimulationDistance 2000;
-			"Vehicle" setDynamicSimulationDistance 2000;
-			"EmptyVehicle" setDynamicSimulationDistance 1000;
-			"Prop" setDynamicSimulationDistance 500;
+//_dynsim = [
+//		{
+//			enableDynamicSimulationSystem true;
+//			"Group" setDynamicSimulationDistance 2000;
+//			"Vehicle" setDynamicSimulationDistance 2000;
+//			"EmptyVehicle" setDynamicSimulationDistance 1000;
+//			"Prop" setDynamicSimulationDistance 500;
 
-			{ _x enableDynamicSimulation true;} forEach allGroups;
-			{ _x enableDynamicSimulation true;} forEach vehicles;
+//			{ _x enableDynamicSimulation true;} forEach allGroups;
+//			{ _x enableDynamicSimulation true;} forEach vehicles;
 			
-		}, 120, []
+//		}, 120, []
+//	] call CBA_fnc_addPerFrameHandler;
+
+
+side_mission_active = false;
+_sideMission = [
+		{
+            if (not side_mission_active) then {
+                //systemChat("Starting side mission");
+			    [false] spawn btc_fnc_side_create;
+                side_mission_active = true;
+            };
+			
+		}, 60, []
 	] call CBA_fnc_addPerFrameHandler;

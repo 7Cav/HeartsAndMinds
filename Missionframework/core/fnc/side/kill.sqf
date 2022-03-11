@@ -155,8 +155,9 @@ _group_officer setVariable ["no_cache", false];
 
 [[], _toDelete] call btc_fnc_delete;
 removeMissionEventHandler ["HandleDisconnect", _IDEH_HandleDisconnect];
-if ((_taskID call BIS_fnc_taskState) in ["CANCELED", "FAILED"]) exitWith {[_taskID, _taskID call BIS_fnc_taskState] call btc_fnc_task_setState};
+if ((_taskID call BIS_fnc_taskState) in ["CANCELED", "FAILED"]) exitWith {[_taskID, _taskID call BIS_fnc_taskState] call btc_fnc_task_setState; side_mission_active = false;};
 
 40 call btc_fnc_rep_change;
+side_mission_active = false;
 
 [_taskID, "SUCCEEDED"] call btc_fnc_task_setState;

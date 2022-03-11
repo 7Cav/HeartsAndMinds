@@ -96,12 +96,15 @@ _group_civ setVariable ["no_cache", false];
 
 if (_taskID call BIS_fnc_taskState isEqualTo "CANCELED") exitWith {
     [[], _group + [_group_civ, _trigger, _mine]] call btc_fnc_delete;
+    side_mission_active = false;
 };
 if !(alive _captive) exitWith {
     [_taskID, "FAILED"] call BIS_fnc_taskSetState;
     [[], _group + [_group_civ, _trigger, _mine]] call btc_fnc_delete;
+    side_mission_active = false;
 };
 
 40 call btc_fnc_rep_change;
+side_mission_active = false;
 
 [_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;
