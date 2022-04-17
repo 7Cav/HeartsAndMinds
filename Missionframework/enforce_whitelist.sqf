@@ -6,12 +6,12 @@ waitUntil {alive player};
 sleep 1;
 
 // add check for mission controller
-if (str(player) isEqualTo "missioncontroller") then {
+if (str(player) isEqualTo "missioncontroller" && !(serverCommandAvailable "#kick")) then {
 
     private _match = false;
 
     [] call {
-        if ((getPlayerUID player) in cav_whitelisted_steamids) exitWith {_match = true;};
+        if ((getPlayerUID player) in zeus_whitelist) exitWith {_match = true;};
     };
 
     if (!_match) then {
@@ -20,12 +20,12 @@ if (str(player) isEqualTo "missioncontroller") then {
     };
 };
 
-if (str(player) isEqualTo "missioncontroller1") then {
+if (str(player) isEqualTo "missioncontroller1" && !(serverCommandAvailable "#kick")) then {
 
     private _match = false;
 
     [] call {
-        if ((getPlayerUID player) in cav_whitelisted_steamids) exitWith {_match = true;};
+        if ((getPlayerUID player) in zeus_whitelist) exitWith {_match = true;};
     };
 
     if (!_match) then {
@@ -34,12 +34,12 @@ if (str(player) isEqualTo "missioncontroller1") then {
     };
 };
 // add check for MP's
-if (str(player) isEqualTo "militarypolice") then {
+if (str(player) isEqualTo "militarypolice" && !(serverCommandAvailable "#kick")) then {
 
     private _match = false;
 
     [] call {
-        if ((getPlayerUID player) in MP_whitelisted_steamids) exitWith {_match = true;};
+        if ((getPlayerUID player) in zeus_whitelist) exitWith {_match = true;};
     };
 
     if (!_match) then {
@@ -48,12 +48,12 @@ if (str(player) isEqualTo "militarypolice") then {
     };
 };
 
-if (str(player) isEqualTo "militarypolice1") then {
+if (str(player) isEqualTo "militarypolice1" && !(serverCommandAvailable "#kick")) then {
 
     private _match = false;
 
     [] call {
-        if ((getPlayerUID player) in MP_whitelisted_steamids) exitWith {_match = true;};
+        if ((getPlayerUID player) in zeus_whitelist) exitWith {_match = true;};
     };
 
     if (!_match) then {
