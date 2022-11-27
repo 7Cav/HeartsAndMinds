@@ -97,9 +97,15 @@ GarageVehicles = [
     ["RHS_CH_47F_10_cargo", 5, -1, "", "air", {}, {}],
 
     // A-10C
-    ["FIR_A10C_MD", 5, -1, "", "air", {}, {}],
+    ["USAF_A10", 5, -1, "", "air", {}, {}],
 
-    // Super Hornet
+    // F-35
+    ["USAF_F35A", 5, -1, "", "air", {}, {}],
+
+    // Raptor
+    ["USAF_F22_Heavy", 5, -1, "", "air", {}, {}],
+
+    // AH64
     ["RHS_AH64D_wd", 5, -1, "", "air", {}, {}]
 
 ];
