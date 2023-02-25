@@ -195,4 +195,4 @@ if (btc_p_arsenal_Type > 0) then {
         btc_gear_object addAction [localize "STR_BTC_HAM_ACTION_ARSENAL_OPEN_ACE", "[btc_gear_object, player] call ace_arsenal_fnc_openBox;"];
     };
 };
-[] call btc_fnc_arsenal_data;};
+[] call btc_fnc_arsenal_data;
