@@ -67,3 +67,21 @@ if (_arsenalType > 0) then {
         [_box, _aceRemove] call ace_arsenal_fnc_removeVirtualItems;
     };
 };
+
+// Gather RUGBY List
+_cavBlacklistItems = [];   
+_blacklistCFGS = "true" configClasses (configfile >> "CfgWeapons");   
+  
+{   
+    _itemName = _x call BIS_fnc_displayName;   
+    _configName = configName _x;  
+ 
+    if ((["RUGBY",_itemName] call BIS_fnc_inString)) then { 
+
+                _cavBlacklistItems PushBack _configName; 
+
+        };   
+} forEach _blacklistCFGS; 
+
+// Remove Items from Default Arsenal
+[btc_gear_object,_cavBlacklistItems,false] call ace_arsenal_fnc_removeVirtualItems;
